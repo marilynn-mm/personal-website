@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Tech Stack
+This project is built using the following technologies:
 
-Currently, two official plugins are available:
+### **Frontend**
+- **React (TypeScript)** - Component-based UI library for building interactive user interfaces
+- **Vite** - Fast build tool and development server for modern web applications
+- **HTML & CSS** - Structuring and styling the web page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### **State Management**
+- **React Hooks (useState, useEffect)** - Managing component state and side effects
 
-## Expanding the ESLint configuration
+### **Styling**
+- **CSS Modules** - Scoped styles to prevent conflicts
+- **Tailwind CSS (Optional)** - Utility-first CSS framework for rapid UI development
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### **Deployment**
+- **Vercel** - Cloud platform for hosting frontend applications with automatic deployments
 
-- Configure the top-level `parserOptions` property like this:
+## 🎯 Features
+- A personal bio section
+- Links to social media profiles (LinkedIn, GitHub, Art Website, Instagram)
+- Responsive and mobile-friendly design
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Installation & Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/personal-website.git
+   cd personal-website
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+4. Open your browser and navigate to:
+   ```sh
+   http://localhost:3000
+   ```
+
+## 🚀 Deployment
+To deploy the project to Vercel, run:
+```sh
+vercel
+```
+Make sure you have the **Vercel CLI** installed:
+```sh
+npm install -g vercel
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🔧 Customization
+Modify `src/App.tsx` to update content, and adjust styles in `src/App.css`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📝 License
+This project is licensed under the MIT License.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
